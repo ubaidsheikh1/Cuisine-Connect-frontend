@@ -14,7 +14,7 @@ if(isAuthenticated) {
 
 return <Navigate to="/" replace />
 
- // return isAuthenticated ? <Outlet/>  : <Navigate to = "/" replace/>;
+ 
 };
 
 export default ProtectedRoute;

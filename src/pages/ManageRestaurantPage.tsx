@@ -1,4 +1,4 @@
-import { useCreateMyRestaurant, useGetMyRestaurant, useUpdateMyRestaurant } from "@/api/MyRestaurantApi";
+import { useCreateMyRestaurant, useGetMyRestaurant, useUpdateMyRestaurant } from"@/api/MyRestaurantApi";
 
 import ManageRestaurantForm from "@/forms/manage-restaurant-form/ManageRestaurantForm";
 

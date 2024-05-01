@@ -6,7 +6,8 @@ import { useFormContext } from "react-hook-form";
 type Props = {
   index: number;
   removeMenuItem: () => void;
- };
+
+};
 
 const MenuItemInput = ({ index, removeMenuItem }: Props) => {
         const {control} = useFormContext();
@@ -14,8 +15,11 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
 
         return (
             <div className="flex flex-row items-end gap-2">
-             <FormField control={control} 
+             <FormField 
+             
+             control={control} 
              name={`menuItems.${index}.name`} 
+           
              render={({field})=> ( 
              <FormItem>
                 <FormLabel className="flex items-center gap-1">
@@ -35,6 +39,7 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
              <FormField 
              control={control} 
              name={`menuItems.${index}.price`} 
+           
              render={({field})=> ( 
              <FormItem>
                 <FormLabel className="flex items-center gap-1">
@@ -64,5 +69,8 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
 
 
 export default MenuItemInput
+
+
+
 
 

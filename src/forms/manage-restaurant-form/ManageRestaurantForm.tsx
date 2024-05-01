@@ -102,29 +102,26 @@ form.reset(updatedRestaurant);
 
            formData.append(
             "deliveryPrice",
-            (formDataJson.deliveryPrice * 100).toString()
+            (formDataJson.deliveryPrice*100).toString()
         );
         formData.append(
             "estimatedDeliveryTime",
              formDataJson.estimatedDeliveryTime.toString()
             );
-        formDataJson.cuisines.forEach((cuisine, index)=>{
-         formData.append(`cuisines[${index}]`, cuisine);
+        formDataJson.cuisines.forEach((cuisine,index)=>{
+         formData.append(`cuisines[${index}]`,cuisine);
         });
-        formDataJson.menuItems.forEach((menuItem, index)=>{
+        formDataJson.menuItems.forEach((menuItem,index)=>{
            formData.append(`menuItems[${index}][name]`, menuItem.name);
            formData.append(
             `menuItems[${index}][price]`,
-             (menuItem.price * 100).toString()
+             (menuItem.price*100).toString()
            );
         });
         if(formDataJson.imageFile){
             formData.append(`imageFile`,formDataJson.imageFile);
         }
-       
-
-
-        onSave(formData);
+       onSave(formData);
     };
 
   return(

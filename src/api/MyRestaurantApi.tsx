@@ -1,5 +1,6 @@
 import { Restaurant } from "@/types";
 import { useAuth0 } from "@auth0/auth0-react";
+
 import { useMutation, useQuery } from "react-query";
 import { toast } from "sonner";
 
@@ -11,10 +12,11 @@ export const useGetMyRestaurant = ()=>{
     const getmyRestaurantRequest = async():Promise<Restaurant>=>{
        const accessToken = await getAccessTokenSilently();
 
-       const response = await fetch(`${API_BASE_URL}/api/my/restaurant`,{
+       const response = await fetch(`${API_BASE_URL}/api/my/restaurant`,
+       {
         method: "GET",
         headers: {
-            Authorization: `Bearer ${accessToken}`,
+            Authorization: `Bearer${accessToken}`,
         },
         
        })
@@ -114,8 +116,5 @@ export const useUpdateMyRestaurant=()=>{
 
         return {updateRestaurant, isLoading };
 };
-
-
-
 
 
