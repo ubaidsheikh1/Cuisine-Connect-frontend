@@ -7,7 +7,7 @@ type Props = {
   field: ControllerRenderProps<FieldValues, "cuisines">;
 };
 
-const CuisineCheckbox = ({cuisine, field }: Props) => {
+const CuisineCheckbox = ({ cuisine, field }: Props) => {
   return (
     <FormItem className="flex flex-row items-center space-x-1 space-y-0 mt-2">
       <FormControl>
@@ -31,5 +31,3 @@ const CuisineCheckbox = ({cuisine, field }: Props) => {
 };
 
 export default CuisineCheckbox;
-
-
