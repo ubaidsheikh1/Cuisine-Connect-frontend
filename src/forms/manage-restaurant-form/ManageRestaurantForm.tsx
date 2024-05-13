@@ -159,7 +159,7 @@ import DetailsSection from "./DetailsSection";
 import { Separator } from "@/components/ui/separator";
 import CuisinesSection from "./CuisinesSection";
 import MenuSection from "./MenuSection";
-import ImageSection from "./ImageSection";
+import ImageSection from "./iimageSection";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 import { Restaurant } from "@/types";
